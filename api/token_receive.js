@@ -11,7 +11,6 @@ export default async function handler(req, res) {
         }
 
         console.log('Received refresh token:', refresh_token);
-        localStorage.setItem("refresh_token", refresh_token)
         res.status(200).json({ message: 'Token received successfully' });
     } catch (error) {
         console.error('Error handling token:', error);
